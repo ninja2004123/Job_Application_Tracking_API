@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "7cf2d48a-998a-4b73-9be2-eef8ee55faa6",
+		"name": "Candidates",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38820467"
+	},
+	"item": [
+		{
+			"name": "Get all Candidates",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "Happy Coding",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/candidates",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"candidates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Candidate with Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "Happy Coding",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/candidates/14",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"candidates",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Candidate",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "Happy Coding",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Elena\",\r\n  \"surname\": \"Jovanovic\",\r\n  \"email\": \"elena.jovanovic@email.com\",\r\n  \"resumeURL\": \"https://resume.com/elena-jovanovic\",\r\n  \"linkedinURL\": \"https://linkedin.com/in/elena-jovanovic\",\r\n  \"skills\": \"Java, REST APIs, Git\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/candidates",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"candidates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Candidate",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "Happy Coding",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Elena\",\r\n  \"surname\": \"Jovanovich\",\r\n  \"email\": \"elena.jovanovic@email.com\",\r\n  \"resumeURL\": \"https://resume.com/elena-jovanovic\",\r\n  \"linkedinURL\": \"https://linkedin.com/in/elena-jovanovic\",\r\n  \"skills\": \"Java, REST APIs, Git\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/candidates/14",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"candidates",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Candidate",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "Happy Coding",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/candidates/14",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"candidates",
+						"14"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

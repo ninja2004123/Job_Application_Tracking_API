@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "ab5ef553-c1a3-4c07-82cf-b1b2309cab8c",
+		"name": "Interview",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38820467"
+	},
+	"item": [
+		{
+			"name": "Get all Interviews",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "Happy Coding",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/interviews",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"interviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Interview with Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "Happy Coding",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/interviews/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"interviews",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create an Interview",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "Happy Coding",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"scheduledAt\": \"2025-06-15T10:00:00\",\r\n  \"location\": \"TechCorp HQ, Skopje\",\r\n  \"status\": \"SCHEDULED\",\r\n  \"notesURL\": \"https://example.com/interview-notes/1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/interviews",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"interviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update an Interview",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "Happy Coding",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"scheduledAt\": \"2025-06-06T11:30:00\",\r\n    \"location\": \"Online - Zoom\",\r\n    \"status\": \"COMPLETED\",\r\n    \"notesURL\": \"https://notes.com/interview2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/interviews/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"interviews",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete an Interview",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "Happy Coding",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/interviews/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"interviews",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

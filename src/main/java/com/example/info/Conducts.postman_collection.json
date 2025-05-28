@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "dc9c515b-1cd4-4112-9790-16cff95c65ac",
+		"name": "Conducts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38820467"
+	},
+	"item": [
+		{
+			"name": "Get all Conducts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "Happy Coding",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/conducts",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Conducts with Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "Happy Coding",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/conducts/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conducts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Conducts",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "Happy Coding",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"interviewId\": 3,\r\n    \"employeeId\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/conducts",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Conducts",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "Happy Coding",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"interviewId\": 2,\r\n    \"employeeId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/conducts/6",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conducts",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Conducts",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "Happy Coding",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/conducts/6",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conducts",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

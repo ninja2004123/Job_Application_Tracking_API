@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "d3282a56-4810-43ce-a497-18f8ba483f62",
+		"name": "Jobs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38820467"
+	},
+	"item": [
+		{
+			"name": "Get all Jobs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "Happy Coding",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/jobs",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Job with Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "Happy Coding",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/jobs/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jobs",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create an Job",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "Happy Coding",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Junior Java Developer\",\r\n    \"description\": \"Develop and maintain Java-based applications in a collaborative Agile team.\",\r\n    \"requirements\": \"Bachelor's Degree in Computer Science, knowledge of Java, Spring, and SQL.\",\r\n    \"location\": \"Skopje\",\r\n    \"employmentTypes\": [\r\n        \"PART_TIME\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/jobs",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Job",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "Happy Coding",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Junior Java Software Engineer\",\r\n    \"description\": \"Junior Java Software Engineer at PlayTech.\",\r\n    \"requirements\": \"Knowledge of Java, Bachlors Degree in Computer Science\",\r\n    \"location\": \"Skopje\",\r\n    \"employmentTypes\": [\r\n        \"PART_TIME\",\r\n        \"FULL_TIME\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/jobs/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jobs",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Job",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "Happy Coding",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/jobs/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jobs",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Jobs By Employment Type",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "Happy Coding",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/jobs/type/FULL_TIME",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"jobs",
+						"type",
+						"FULL_TIME"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

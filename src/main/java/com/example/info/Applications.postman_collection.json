@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "bbcc15eb-da25-4116-b39c-02e2f3c77a01",
+		"name": "Applications",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38820467"
+	},
+	"item": [
+		{
+			"name": "Get all Applications",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "Happy Coding",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/applications",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"applications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Application with Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "Happy Coding",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/applications/10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"applications",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create an Application",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "Happy Coding",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"candidateId\": 2,\r\n  \"jobId\": 4,\r\n  \"status\": \"SUBMITTED\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/applications",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"applications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update an Application",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "Happy Coding",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"applicationId\": 2,\r\n    \"status\": \"UNDER_REVIEW\",\r\n    \"appliedAt\": \"2025-06-01T21:56:14.543169\",\r\n    \"updatedAt\": \"2025-06-01T21:56:14.543169\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/applications/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"applications",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete an Application",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "Happy Coding",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/applications/14",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"applications",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Application by Candidate id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "Happy Coding",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/applications/candidate/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"applications",
+						"candidate",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Application Job with Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "Happy Coding",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/applications/10/job",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"applications",
+						"10",
+						"job"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

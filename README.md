@@ -1,4 +1,4 @@
-# NIKOLA KOSTADINOV 5806
+# Nikola Kostadinov 5806
 
 
 ## Job Application Tracking API
